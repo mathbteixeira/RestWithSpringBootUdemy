@@ -1,6 +1,6 @@
 package br.com.erudio.util.math;
 
-import br.com.erudio.exception.UnsupportedMathOperationException;
+import br.com.erudio.exception.ResourceNotFoundException;
 
 public class MathUtils {
 	
@@ -13,7 +13,7 @@ public class MathUtils {
 
 	public static void validateNumber(String number) {
 		if (!isNumeric(number)) {
-			throw new UnsupportedMathOperationException("Please set a numeric value!");
+			throw new ResourceNotFoundException("Please set a numeric value!");
 		}
 	}
 
@@ -32,7 +32,7 @@ public class MathUtils {
 	
 	public static void validateNumbers(String numberOne, String numberTwo) {
 		if (!isNumeric(numberOne) || !isNumeric(numberTwo)) {
-			throw new UnsupportedMathOperationException("Please set a numeric value!");
+			throw new ResourceNotFoundException("Please set a numeric value!");
 		}
 	}
 	
